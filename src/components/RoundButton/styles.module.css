@@ -1,0 +1,58 @@
+:root {
+    --round-button-diameter: 5em;
+    --transition-duration: 0.25s;
+    --scale-multiplier: 1.15;
+    --container-extra-space: 3px;
+}
+
+button.roundButton {
+    width: var(--round-button-diameter);
+    height: var(--round-button-diameter);
+    background-color: var(--button-normal-bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 
+        background-color var(--transition-duration) ease,
+        transform var(--transition-duration) ease;
+}
+
+button.roundButton:hover:not(:disabled) {
+    background-color: var(--button-normal-bg-color);
+    transform: scale(var(--scale-multiplier));
+}
+
+button.roundButton:active:not(:disabled) {
+    background-color: rgb(0, 255, 51);
+    transform: scale(var(--scale-multiplier)) translateY(0.2em);
+}
+
+button.roundButton:active:disabled {
+    background-color: rgb(255, 0, 0);
+}
+
+div.roundButtonContainer {
+    /* background-color: blue; */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(var(--round-button-diameter) * var(--scale-multiplier) + var(--container-extra-space));
+    width: calc(var(--round-button-diameter) * var(--scale-multiplier) + var(--container-extra-space));
+}
+
+div.roundButtonLabelContainer {
+    width: calc(var(--round-button-diameter) * var(--scale-multiplier) + var(--container-extra-space));
+    display: inline-block;
+    text-align: center;
+}
+
+div.wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* height: min-content;
+    width: min-content; */
+    flex-direction: column;
+    overflow: hidden;
+}

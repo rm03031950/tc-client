@@ -1,0 +1,22 @@
+p.borderBox {
+    border: 3px solid black;
+    /* display: block; */
+    width: 100%;
+    padding: 0.25em;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+p.statusText {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+p.lastError {
+    font-size: 1.3em;
+}
+
+.statusPanelWrapper {
+    padding: 1em;
+    width: 100%;
+}
