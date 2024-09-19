@@ -5,7 +5,4 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
     plugins: [react()],
     base: "/dist",
-    build: {
-        outDir: "C:\\Users\\rmar2\\mar\\projects\\tc-server\\dist"
-    }
 });
