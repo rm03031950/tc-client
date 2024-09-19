@@ -34,16 +34,14 @@ const ControlCenter = () => {
         const request = await fetch(
             constants.baseURL + "/scan"
         )
-        const response = await request.json()
-        toggleFlag();
+        const response = await request.json();
     }
 
     const testMode = async () => {
         const request = await fetch(
             constants.baseURL + "/test"
         )
-        const response = await request.json()
-        toggleFlag();
+        const response = await request.json();
     }
 
     return (
